@@ -29,7 +29,7 @@ import Flor from "../components/Flor.astro";
 	};
 </script>
 
-<Layout title="NATHALEE">
+<Layout title="Mix XV">
 	<div
 		id="autoplayBlock"
 		class="bg-blue-600 text-white p-2 fixed top-0 left-0 w-full h-full flex items-center justify-center z-10 transition-opacity duration-1000 pointer-events-auto opacity-100"
@@ -58,7 +58,7 @@ import Flor from "../components/Flor.astro";
 		<Background />
 
 		<h1
-			class="text-4xl sm:text-6xl font-bold text-blue-500 mb-6 text-center"
+			class="text-4xl sm:text-6xl font-bold text-blue-500 mb-6 text-center text-outline"
 		>
 			Nathalee Marian Robles Gonzalez
 		</h1>
@@ -131,7 +131,7 @@ import Flor from "../components/Flor.astro";
 				</Card>
 			</div>
 			<p
-			class="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+			class="text-outline text-bold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
 		>
 			Si tienes alguna duda o comentario, no dudes en contactarme
 		</p>
@@ -142,5 +142,9 @@ import Flor from "../components/Flor.astro";
 <style>
 	*:not(#autoplayBlock) {
 		z-index: 5;
+	}
+
+	.text-outline {
+		text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 	}
 </style>
