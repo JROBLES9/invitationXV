@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GiftIcon from "../components/icons/GiftIcon.astro";
+import Letter from "../components/icons/Letter.astro";
+
+
+---
+
+<script>
+	let audioElement = document.getElementById("myAudio");
+	const audioTime = localStorage.getItem("audioTime");
+	(audioElement as HTMLAudioElement).currentTime = Number(audioTime);
+</script>
+
+<Layout title="NATHALEE">
+    <audio id="myAudio" autoplay>
+        <source src="/audios/music.mp3" type="audio/mpeg" />
+    </audio>
+    <div
+        class="flex justify-center items-center hover:bg-blue-200 p-2 rounded-lg shadow transition-colors duration-200 ease-in-out"
+        onclick="window.location.href='/invitation'; const audio = document.getElementById('myAudio');
+		localStorage.setItem('audioTime', String(audio.currentTime));"
+    >
+        <Letter
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20"
+        />
+        <h1
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-blue-900 font-bold ml-2"
+        >
+            Regresar
+        </h1>
+    </div>
+
+    <main
+        class="flex flex-col items-center justify-center min-h-screen max-w-3xl mx-auto px-4 py-8"
+    >
+        <GiftIcon
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64"
+        />
+        <p class="text-blue-900 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            El regalo es opcional la asistencia obligatoria. Pero si deseas
+            hacer tu regalo en efectivo habrá un buzón en la entrada del
+            lugar de la fiesta. Donde podras dejar tu regalo.
+        </p>
+    </main>
+</Layout>

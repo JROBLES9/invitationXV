@@ -1,0 +1,210 @@
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+
+<div class="petal2"></div>
+<div class="petal2"></div>
+<div class="petal2"></div>
+<div class="petal2"></div>
+<div class="petal2"></div>
+<div class="petal2"></div>
+
+<div class="petal3"></div>
+<div class="petal3"></div>
+<div class="petal3"></div>
+<div class="petal3"></div>
+<div class="petal3"></div>
+<div class="petal3"></div>
+
+<div class="petal4"></div>
+<div class="petal4"></div>
+<div class="petal4"></div>
+<div class="petal4"></div>
+<div class="petal4"></div>
+
+<script>
+    // Selecciona todos los elementos .petal
+    var petals = document.querySelectorAll(".petal");
+    for (var i = 0; i < petals.length; i++) {
+        petals[i].style.top = Math.random() * 100 + "%";
+        petals[i].style.left = Math.random() * 100 + "%";
+    }
+
+    // Selecciona todos los elementos .petal2 y asigna posiciones aleatorias
+    var petals2 = document.querySelectorAll(".petal2");
+    for (var i = 0; i < petals2.length; i++) {
+        petals2[i].style.top = Math.random() * 100 + "%";
+        petals2[i].style.left = Math.random() * 100 + "%";
+    }
+
+    // Selecciona todos los elementos .petal3 y asigna posiciones aleatorias
+    var petals3 = document.querySelectorAll(".petal3");
+    for (var i = 0; i < petals3.length; i++) {
+        petals3[i].style.top = Math.random() * 100 + "%";
+        petals3[i].style.left = Math.random() * 100 + "%";
+    }
+
+    // Selecciona todos los elementos .petal4 y asigna posiciones aleatorias
+    var petals4 = document.querySelectorAll(".petal4");
+    for (var i = 0; i < petals4.length; i++) {
+        petals4[i].style.top = Math.random() * 100 + "%";
+        petals4[i].style.left = Math.random() * 100 + "%";
+    }
+</script>
+
+<style>
+    * {
+        z-index: -10;
+    }
+    .petal,
+    .petal2,
+    .petal3,
+    .petal4 {
+        position: fixed;
+        pointer-events: none;
+    }
+
+    .petal {
+        background: #2db3d5;
+        width: 20px;
+        height: 28px;
+        top: 0px;
+        transition: all 0.5s ease-out;
+
+        background: #2db3d5;
+        border-radius: 0px 14px 0px 14px;
+        transform-origin: bottom right;
+
+        z-index: 5;
+        background: #2db3d5;
+        box-shadow: 0px 0px 16px rgba(80, 149, 189, 0.993);
+        animation:
+            bloomp2 60s ease-in-out infinite,
+            glowing 2.5s ease-in-out infinite;
+    }
+
+    .petal2 {
+        background: #2db3d5;
+        width: 20px;
+        height: 28px;
+        top: 0px;
+        transition: all 0.5s ease-out;
+
+        background: #2db3d5;
+        border-radius: 0px 14px 0px 14px;
+        transform-origin: bottom right;
+
+        z-index: 5;
+        background: #2db3d5;
+        box-shadow: 0px 0px 16px rgba(80, 149, 189, 0.993);
+        animation:
+            bloomp3 60s ease-in-out infinite,
+            glowing 2.5s ease-in-out infinite;
+    }
+
+    .petal3 {
+        background: #2db3d5;
+        width: 20px;
+        height: 28px;
+        top: 0px;
+        transition: all 0.5s ease-out;
+
+        background: #2db3d5;
+        border-radius: 0px 14px 0px 5px;
+        transform-origin: bottom right;
+
+        z-index: 5;
+        background: #2db3d5;
+        box-shadow: 0px 0px 16px rgba(80, 149, 189, 0.993);
+        animation:
+            bloomp4 60s ease-in-out infinite,
+            glowing 2.5s ease-in-out infinite;
+    }
+
+    .petal4 {
+        background: #2db3d5;
+        width: 20px;
+        height: 28px;
+        top: 0px;
+        transition: all 0.5s ease-out;
+
+        background: #2db3d5;
+        border-radius: 0px 14px 0px 5px;
+        transform-origin: bottom right;
+
+        z-index: 5;
+        background: #2db3d5;
+        box-shadow: 0px 0px 16px rgba(80, 149, 189, 0.993);
+        animation:
+            bloomp4 60s ease-in-out infinite,
+            glowing 2.5s ease-in-out infinite;
+    }
+
+    @keyframes bloomp2 {
+        
+        25% {
+            transform: rotate(45deg);
+        }
+        50% {
+            transform: rotate(-45deg);
+        }
+        75% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes bloomp3 {
+        25% {
+            transform: rotate(-50deg);
+        }
+        50% {
+            transform: rotate(50deg);
+        }
+        75% {
+            transform: rotate(-50deg);
+        }
+        100% {
+            transform: rotate(-50deg);
+        }
+    }
+
+    @keyframes bloomp4 {
+        25% {
+            transform: rotate(25deg);
+        }
+        50% {
+            transform: rotate(-25deg);
+        }
+        75% {
+            transform: rotate(25deg);
+        }
+        100% {
+            transform: rotate(-25deg);
+        }
+    }
+
+    @keyframes glowing {
+        50% {
+            background: #d7365f;
+            box-shadow: 0px 0px 60px rgba(245, 148, 184, 1);
+        }
+    }
+
+    @keyframes falling {
+        20% {
+            background: #9d193b;
+            box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
